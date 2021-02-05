@@ -1,0 +1,359 @@
+/*VARIABLES AND GLOBAL STYLES*/
+
+:root
+{
+	--clr-green : rgba(64,130,109,1);
+	--clr-light-green : rgba(64,130,109,0.6);
+}
+body
+{
+	font-family: 'Segoe UI';
+	margin: 0;
+	background-image: url("https://www.muralswallpaper.com/app/uploads/Green-Tropical-Plant-Wallpaper-Mural-Plain.jpg");
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+p, h1, span, h3, span
+{
+	margin: 0px;
+	padding: 0px
+}
+ul
+{
+	list-style-type: none;
+	display: flex;
+	margin: 0px;
+	padding: 0px;
+}
+a
+{
+	text-decoration: none;
+}
+button
+{
+	outline: none;
+	border: 0px;
+}
+
+/*NAVIGATION BAR*/
+
+.navbar
+{
+	display: grid;
+	grid-template-columns: 3fr,repeat(3,1fr);
+	height: 100px;
+	background-color: var(--clr-green);
+	align-items: center;
+	justify-items: center;
+}
+.navbar h1
+{
+	color: white;
+	padding-left: 5px;
+}
+.navbar ul
+{
+	grid-column-start: 5;
+}
+.navbar li
+{
+	margin-right: 30px;
+}
+.navbar a
+{
+	color: white;
+	text-shadow: 0px 3px 5px black;
+}
+.navbar a:hover
+{
+	font-size: 1.05em;
+}
+@media (min-width: 0px) and (max-width: 762px)
+{
+	.navbar
+	{
+		grid-template-columns: 2fr 1fr;
+	}
+}
+
+/*HOMEPAGE*/
+
+.homepage
+{
+	display: grid;
+	grid-template-rows: 100px auto;
+	grid-template-columns: 1fr;
+	justify-items: center;
+	align-items: center;
+}
+.search-bar
+{
+	justify-self: center;
+	align-self: center;
+}
+.search-bar input
+{
+	width: 70%;
+	height: 30px;
+	border: 3px solid var(--clr-green);
+	border-radius: 0px;
+	outline: none;
+	font-size: 1.1em;
+	padding: 0px 10px 0px 10px;
+	color: rgba(0,0,0,0.7);
+}
+.search-bar button
+{
+	padding: 0px;
+	background-color: white;
+	font-size: 1.1em;
+	font-weight: bold;
+	color: var(--clr-green);
+	height: 36px;
+	width: 36px;
+	border: solid var(--clr-green);
+	border-width: 3px 3px 3px 0px;
+}
+.search-bar button:hover
+{
+	background-color: var(--clr-green);
+	color: white;
+}
+.cocktail-list
+{
+	display: grid;
+	grid-template-columns: repeat(3,1fr);
+	grid-gap: 20px;
+	width: 70%;
+	background-color: white;
+	padding: 20px;
+	margin-bottom: 30px;
+}
+.cocktail-list-item
+{
+	background-color: white;
+	padding: 10px;
+}
+.cocktail-list-item:hover
+{
+	box-shadow: 0px 1px 3px black;
+}
+.cocktail-list-item img
+{
+	width: 100%;
+}
+.cocktail-name
+{
+	font-size: 2rem;
+	font-weight: bold;
+	color: var(--clr-green);
+}
+.cocktail-glass
+{
+	font-size: 0.8em;
+}
+.cocktail-category
+{
+	font-size: 0.8em;
+	color: grey;
+}
+.cocktail-list-item a
+{
+	font-size: 1.3rem;
+}
+.cocktail-list-item svg
+{
+	margin-top: 10px;
+}
+.cocktail-list-item a:hover path
+{
+	stroke: var(--clr-green);
+}
+.no-results
+{
+	margin: auto;
+	margin-top: 10px;
+	color: white;
+}
+@media (min-width: 0px) and (max-width: 762px)
+{
+	.cocktail-list
+	{
+		grid-template-columns: repeat(1,1fr);
+	}
+	.search-bar input
+	{
+		width: 70%;
+	}
+}
+@media (min-width: 762px) and (max-width: 1104px)
+{
+	.cocktail-list
+	{
+		grid-template-columns: repeat(2,1fr);
+		grid-gap: 20px;
+	}
+}
+
+/*SINGLE COCKTAIL*/
+
+.single-cocktail
+{
+	width: 70%;
+	margin: auto;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 10px;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	background-color: white;
+	padding: 20px;
+}
+.single-cocktail img
+{
+	width: 100%;
+}
+.info h3
+{
+	background-color: var(--clr-light-green);
+	margin-top: 20px;
+	display: inline-block;
+	padding: 5px;
+	border-radius: 10px;
+}
+.info span
+{
+	color: var(--clr-light-green);
+	font-weight: bold;
+}
+.info button
+{
+	background-color: var(--clr-light-green);
+	padding: 5px;
+	font-size: 1.3em;
+	margin-top: 20px;
+	transform: rotate(180deg);
+	border-radius: 10px;
+}
+@media (min-width: 0px) and (max-width: 762px)
+{
+	.single-cocktail
+	{
+		grid-template-columns: 1fr;
+	}
+}
+
+/*ABOUT*/
+
+.about
+{
+	width: 50%;
+	margin: auto;
+	background-color: var(--clr-green);
+	margin-top: 30px;
+	text-align: center;
+	padding: 20px;
+	box-shadow: 0px 3px 5px black;
+	color: white;
+}
+.about h1
+{
+	margin-bottom: 10px;
+}
+.about p
+{
+	text-shadow: 0px 3px 5px black;
+}
+@media (min-width: 0px) and (max-width: 762px)
+{
+	.about
+	{
+		width: 80%;
+	}
+}
+
+/*LOADING*/
+
+.loading
+{
+	display: grid;
+	width: 100px;
+	grid-template-columns: repeat(3,1fr);
+	margin: auto;
+	margin-top: 30px;
+}
+.loading div
+{
+	background-color: white;
+	width: 30px;
+	justify-items: center;
+	align-items: baseline;
+}
+.load1
+{
+	height: 70px;
+	animation: loadone 1s linear infinite;
+}
+.load2
+{
+	height: 50px;
+	animation: loadtwo 1s linear infinite;
+}
+.load3
+{
+	height: 30px;
+	animation: loadthree 1s linear infinite;
+}
+@keyframes loadone
+{
+	0% {height: 70px}
+	25% {height: 50px}
+	50% {height: 30px}
+	75% {height: 50px}
+	100% {height: 70px}
+}
+@keyframes loadtwo
+{
+	0% {height: 50px}
+	25% {height: 30px}
+	50% {height: 50px}
+	75% {height: 70px}
+	100% {height: 50px}
+}
+@keyframes loadthree
+{
+	0% {height: 30px}
+	25% {height: 50px}
+	50% {height: 70px}
+	75% {height: 50px}
+	100% {height: 30px}
+}
+
+/*ERROR*/
+
+.error
+{
+	width: 50%;
+	margin: auto;
+	margin-top: 30px;
+	text-align: center;
+	color: red;
+}
+.error button
+{
+	background-color: var(--clr-green);
+	padding: 10px;
+	margin-top: 30px;
+}
+.error a
+{
+	color: white;
+	font-weight: bold;
+	font-size: 1.3em;
+}
+.error button:hover a
+{
+	font-size: 1.5em;
+}
